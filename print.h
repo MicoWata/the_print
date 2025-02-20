@@ -1,6 +1,7 @@
 #ifndef PRINT_H
 #define PRINT_H
 
+#include <stdio.h>
 #include <stdbool.h>
 
 #define FORMAT(T) _Generic((T), \

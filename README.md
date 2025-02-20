@@ -1,6 +1,6 @@
 # The Print
 
-A type-safe, variadic print function for C that automatically detects and formats different data types.
+A print function that prints up to 32 arguments of any primitive type, all in a single tiny C header.
 
 ## Features
 
@@ -14,6 +14,7 @@ A type-safe, variadic print function for C that automatically detects and format
   - Booleans
   - Pointers
   - Size types
+  - And many more, see examples directory
 
 ## Usage
 
@@ -21,25 +22,20 @@ A type-safe, variadic print function for C that automatically detects and format
 #include "print.h"
 
 int main() {
-    char* hello = "Hello";
-    int num = 42;
-    float pi = 3.14;
-    
-    print(hello, ", number = ", num, ", pi = ", pi, "\n");
-    return 0;
+  char* hello = "hello";
+  char coma = ',';
+  char world[] = { 119, 111, 114, 108, 100 };
+
+  print(hello, coma, world);
+  // hello, world
 }
-```
 
-## Building
-
-```bash
-gcc -o program main.c -Wall -Wextra
 ```
 
 ## Examples
 
 Check the `examples/` directory for more usage examples:
-- Basic types (`examples/types.md`)
+- Exotic primitives (`examples/types.md`)
 - Arrays (`examples/arrays.md`)
 - Structures (`examples/struct.md`)
 
