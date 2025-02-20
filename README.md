@@ -1,6 +1,35 @@
 # The Print
 
-A print function that prints up to 32 arguments of any primitive type, all in a single tiny C header.
+Do you find print debugging cumbersome in C ?
+
+Well, I do too.
+
+So here's a print function that even a baby could use.
+
+It prints up to 32 arguments of any primitive type, and stands whole in a single tiny C header.
+
+Just copy the print.h file somewhere in your project and you're ready to go.
+
+## Usage
+
+```c
+#include "print.h"
+
+int main() {
+  char* hello = "hello";
+  char coma = ',';
+  char world[] = { 119, 111, 114, 108, 100 };
+
+  print(hello, coma, world); // hello, world
+}
+```
+
+## Examples
+
+Check the `examples/` directory for more usage examples:
+- Exotic primitives (`examples/types.md`)
+- Arrays (`examples/arrays.md`)
+- Structures (`examples/struct.md`)
 
 ## Features
 
@@ -15,27 +44,3 @@ A print function that prints up to 32 arguments of any primitive type, all in a 
   - Pointers
   - Size types
   - And many more, see examples directory
-
-## Usage
-
-```c
-#include "print.h"
-
-int main() {
-  char* hello = "hello";
-  char coma = ',';
-  char world[] = { 119, 111, 114, 108, 100 };
-
-  print(hello, coma, world);
-  // hello, world
-}
-
-```
-
-## Examples
-
-Check the `examples/` directory for more usage examples:
-- Exotic primitives (`examples/types.md`)
-- Arrays (`examples/arrays.md`)
-- Structures (`examples/struct.md`)
-
