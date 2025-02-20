@@ -1,4 +1,8 @@
-#include "print.h"
+#include "../../print.h"
+
+/*
+hello, world
+*/
 
 int main() {
   char* hello = "hello";
